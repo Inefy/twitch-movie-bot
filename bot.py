@@ -1,4 +1,4 @@
-# MovieBot/bot.py
+# StreamCinema Vote Bot / bot.py
 # Updated code incorporating fixes for obs-websocket-py v5 and other improvements
 
 import os
@@ -1238,7 +1238,7 @@ class MovieBot(commands.Bot):
     async def help_command(self, ctx: commands.Context):
         """Displays help information."""
         help_lines = [
-            f"--- {self.nick} Movie Bot ---",
+            f"--- {self.nick} StreamCinema Vote Bot ---",
             f"`!vote <movie name>` : Vote for the next movie.",
             f"`!currentmovie` : Show the current movie.",
             f"`!time` : Show remaining time.",

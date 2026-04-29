@@ -586,7 +586,7 @@ async def test_help_command_sends_lines(dummy_bot_instance, mock_ctx, mocker):
 
     expected_lines_count = 6 
     assert mock_ctx.send.await_count == expected_lines_count
-    mock_ctx.send.assert_any_await(f"--- {TEST_BOT_NICK} Movie Bot ---")
+    mock_ctx.send.assert_any_await(f"--- {TEST_BOT_NICK} StreamCinema Vote Bot ---")
     mock_ctx.send.assert_any_await(f"`!movies` : Link to movie list.")
     assert mock_sleep.await_count == expected_lines_count # sleep is called for each line
     if expected_lines_count > 0 : # only assert if sleep was expected

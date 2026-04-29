@@ -1,0 +1,46 @@
+# requirements.txt
+# Core Dependencies
+twitchio>=2.10,<3.0
+requests>=2.32,<3.0
+moviepy>=1.0,<1.1
+obs-websocket-py>=1.0,<1.1 # Check latest compatible version if needed
+python-dotenv>=1.0,<1.1
+
+# Moviepy Dependencies (often needed)
+numpy>=1.20,<3.0 # Looser upper bound for numpy if needed
+decorator>=4.4,<5.0
+tqdm>=4.66,<5.0
+imageio>=2.30,<3.0 # May need imageio-ffmpeg depending on moviepy usage/formats
+# imageio-ffmpeg>=0.4,<0.6 # Uncomment if specific ffmpeg features via imageio are needed
+
+# Async Dependencies (pulled by twitchio/others)
+aiohttp>=3.9,<4.0 # Update based on twitchio's requirements if necessary
+aiosignal>=1.3,<1.4
+attrs>=23.0,<25.0
+frozenlist>=1.4,<1.5
+multidict>=6.0,<6.1
+yarl>=1.9,<1.14
+async-timeout>=4.0,<4.1 # Often a sub-dependency
+
+# Other Dependencies
+certifi>=2024.0.0
+charset-normalizer>=3.3,<3.4
+idna>=3.6,<3.8
+urllib3>=2.2,<2.3
+websocket-client>=1.7,<1.9 # Used by obs-websocket-py
+
+# Development/Testing Dependencies
+pytest>=7.0,<9.0
+pytest-asyncio>=0.20,<0.24
+pytest-mock>=3.0,<4.0
+
+# Optional/Transitive (Review if needed directly)
+# pillow>=10.0,<11.0 # Often needed by moviepy/imageio
+# proglog>=0.1,<0.2
+# typing_extensions>=4.0 # Usually for older Python versions / library compat
+# setuptools # Usually present, pinning might not be needed unless build issues occur
+# iso8601>=2.1,<2.2 # Check if used directly or only via deps
+# aiohappyeyeballs==2.4.2 # Specific pin, review if needed directly
+# colorama==0.4.6 # Often for colored terminal output, check direct usage
+# future==1.0.0 # Usually for Python 2/3 compat, likely not needed
+# ffmpeg-python==0.2.0 # Consider if direct ffmpeg control needed beyond moviepy

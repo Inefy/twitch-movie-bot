@@ -2,6 +2,8 @@
 
 Turn Twitch chat into the remote control for a 24/7 movie stream. StreamCinema Vote Bot watches a local movie folder, plays videos through OBS, and lets viewers vote in chat for what comes next.
 
+Also known as a **Twitch movie vote bot**, it is built for streamers who want viewers to pick the next movie from chat while OBS handles playback.
+
 ## What It Does
 
 - Scans a local movie folder and keeps an in-memory list of playable files.
